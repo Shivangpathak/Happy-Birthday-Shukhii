@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Cutting Ceremony</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-cake-cutting">
+    <header>
+        <h1>Cake Cutting Ceremony</h1>
+    </header>
+
+    <section class="cake">
+        <img src="cake.jpg" alt="Birthday Cake" class="responsive-img" id="cake-img">
+        <button onclick="cutCake()">Cut the Cake</button>
+        <p id="celebration-message" style="display:none;">Happiest Birthday To Sabse Pyaari Girl In Whole Duniya!</p>
+    </section>
+
+    <footer>
+        <button onclick="window.location.href='messages.html'">Next</button>
+    </footer>
+
+    <script>
+        function cutCake() {
+            document.getElementById('celebration-message').style.display = 'block';
+            document.getElementById('cake-img').src = "cake-cut.jpg"; // Replace with a photo of the cake being cut
+        }
+    </script>
+</body>
+</html>
