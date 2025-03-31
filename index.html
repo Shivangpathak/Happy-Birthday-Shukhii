@@ -1,104 +1,27 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Shukhii Ji!</title>
-    <style>
-        body {
-            text-align: center;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            padding: 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
-        img {
-            width: 90%; 
-            max-width: 350px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-            animation: popIn 1.5s ease-in-out;
-        }
-        h1 {
-            font-size: 2.8rem;
-            animation: fadeIn 2s ease-in-out;
-            background: linear-gradient(90deg, #ff758c, #ff7eb3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1.2rem;
-            animation: fadeIn 3s ease-in-out;
-        }
-        .cake {
-            width: 200px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .cake:hover {
-            transform: scale(1.1);
-        }
-        .hidden {
-            display: none;
-        }
-        .music-control button, .next-button {
-            background-color: #ff758c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .music-control button:hover, .next-button:hover {
-            background-color: #ff527b;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes popIn {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-    </style>
+    <title>Happy Birthday Shukhii Ji</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <h1> Happy Birthday Baby! 💕🎂</h1>
-        <p>Click on the cake to cut it! 🎂</p>
-        <img src="cake.png" alt="Birthday Cake" class="cake" onclick="cutCake()">
-        <p id="cut-message" class="hidden"> 😁 I Promise you that i will never make you sad or will never hurt you! 🫶</p>
-        <audio id="birthday-music.mp3" autoplay loop>
-            <source src="birthday-music.mp3" type="audio/mpeg">
+<body class="page-home">
+    <header>
+        <h1>Happy Birthday Shukhii <3!</h1>
+        <p>Wishing You Birthday As Beautifully As You Are!</p>
+    </header>
+
+    <section class="intro">
+        <button onclick="window.location.href='cake-cutting.html'">Start the Celebration</button>
+        <audio controls autoplay loop>
+            <source src="birthday-music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
         </audio>
-        <div class="music-control">
-            <button onclick="toggleMusic()">Play/Pause Music</button>
-        </div>
-        <button class="next-button" onclick="nextPage()">Next ➡️</button>
-    </div>
-    <script>
-        function toggleMusic() {
-            var music = document.getElementById("birthdayMusic");
-            if (music.paused) {
-                music.play();
-            } else {
-                music.pause();
-            }
-        }
-        function cutCake() {
-            document.querySelector(".cake").src = "cake-cut.png";
-            document.getElementById("cut-message").classList.remove("hidden");
-        }
-        function nextPage() {
-            window.location.href = "celebration.html";
-        }
-    </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shukhii Ji's Birthday Celebration</p>
+    </footer>
 </body>
 </html>
