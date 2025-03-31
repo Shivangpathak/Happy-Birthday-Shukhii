@@ -74,11 +74,10 @@
 <body>
     <div class="container">
         <h1> Happy Birthday Babyy! 🎂</h1>
-        <img src="your-image.jpg" alt="Birthday Celebration">
+        <img src="photo1.jpg" alt="Birthday Celebration">
         <p>Wishing you a day filled with love, laughter, and happiness! You Are Sabse Pyaari In The Whole Duniya!😚💕</p>
-        <audio id="birthdayMusic" autoplay loop>
-            <source src="your-music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
+        <audio id="birthday-music.mp3" autoplay loop>
+            <source src="birthday-music.mp3" type="audio/mpeg">
         </audio>
         <div class="music-control">
             <button onclick="toggleMusic()">Play/Pause Music</button>
@@ -86,7 +85,7 @@
     </div>
     <script>
         function toggleMusic() {
-            var music = document.getElementById("birthdayMusic");
+            var music = document.getElementById("birthday-music.mp3");
             if (music.paused) {
                 music.play();
             } else {
